@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人履歷</title>
+  <!-- 引入外部 CSS 檔案 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="#profile">個人介紹</a>
+    <a href="#skills">專業技能</a>
+    <a href="#experience">工作經歷</a>
+  </div>
+
+  <div class="container">
+
+    <div id="profile" class="block profile-section">
+      <img src="/image/IMG_6662.jpg" alt="個人照片" class="profile-img">
+      <div class="profile-text">
+        <h2>吳紘在</h2>
+        <p>這裡填入你的個人簡介。</p>
+        <div class="degree">中原大學-企業管理學系</div>
+        <!-- # Quote -->
+        <div class="quote">
+          <h3># Quote</h3>
+          <p>“Whatever you are, be a good one.”</p>
+        </div>
+
+        <!-- # Education -->
+        <div class="education">
+          <h3># Education</h3>
+          <ul>
+            <li><strong>B.B.A., Information Management</strong><br>Chung Yuan Christian University / Taoyuan,
+              Taiwan<br>July 2022 - Present</li>
+            <li><strong>High School</strong><br>Huajiang High School / Taipei, Taiwan<br>Sep 2019 - June 2022</li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank">
+            <img src="./image/facebook.png" alt="Facebook" style="width:24px; height:24px;">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="./image/instagram.jpg" alt="Instagram" style="width:24px; height:24px;">
+          </a>
+          <a href="https://www.line.me/tw/" target="_blank">
+            <img src="./image/line.png" alt="Line" style="width:24px; height:24px;">
+          </a>
+          <a href="https://github.com" target="_blank">
+            <img src="./image/github.png" alt="GitHub" style="width:24px; height:24px;">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="skills" class="block skills">
+      <h3>程式能力</h3>
+      <div class="progress-container">
+        <div class="progress-circle" data-skill="HTML" data-percent="90">
+          <svg width="120" height="120">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #ff7f50;" />
+                <stop offset="100%" style="stop-color: #3498db;" />
+              </linearGradient>
+            </defs>
+            <circle class="background" cx="60" cy="60" r="50" />
+            <circle class="progress" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="progress-text">HTML</div>
+        </div>
+        <div class="progress-circle" data-skill="CSS" data-percent="80">
+          <svg width="120" height="120">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #ff7f50;" />
+                <stop offset="100%" style="stop-color: #3498db;" />
+              </linearGradient>
+            </defs>
+            <circle class="background" cx="60" cy="60" r="50" />
+            <circle class="progress" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="progress-text">CSS</div>
+        </div>
+        <div class="progress-circle" data-skill="JavaScript" data-percent="85">
+          <svg width="120" height="120">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #ff7f50;" />
+                <stop offset="100%" style="stop-color: #3498db;" />
+              </linearGradient>
+            </defs>
+            <circle class="background" cx="60" cy="60" r="50" />
+            <circle class="progress" cx="60" cy="60" r="50" />
+          </svg>
+          <div class="progress-text">JavaScript</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block skills">
+      <h3>專業能力</h3>
+      <div class="progress-bar-container">
+        <div class="progress-label">
+          <span>Design</span><span class="bar-percent">65%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="65" style="width: 65%"></div>
+        </div>
+
+        <div class="progress-label">
+          <span>Video Editing</span><span class="bar-percent">70%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="70" style="width: 70%"></div>
+        </div>
+
+        <div class="progress-label">
+          <span>Cloud Computing</span><span class="bar-percent">65%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="65" style="width: 65%"></div>
+        </div>
+
+        <div class="progress-label">
+          <span>Song Writing</span><span class="bar-percent">65%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="65" style="width: 65%"></div>
+        </div>
+
+        <div class="progress-label">
+          <span>Mixing / Mastering</span><span class="bar-percent">55%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="55" style="width: 55%"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="experience" class="block experience">
+      <h2>工作經歷</h2>
+      <p>這裡填入你的經歷。</p>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".progress-circle").forEach(circle => {
+        const percent = parseInt(circle.dataset.percent);
+        const progress = circle.querySelector(".progress");
+        const text = circle.querySelector(".progress-text");
+        const skill = text.textContent;
+        const dashArray = 314;
+
+        const animateCircle = () => {
+          progress.style.transition = "none";
+          progress.style.strokeDashoffset = dashArray;
+          void progress.offsetWidth;
+          progress.style.transition = "stroke-dashoffset 2s ease-in-out";
+          progress.style.strokeDashoffset = dashArray - (dashArray * percent / 100);
+        };
+
+        setTimeout(animateCircle, 300);
+
+        circle.addEventListener("mouseenter", () => {
+          text.textContent = percent + "%";
+          animateCircle();
+        });
+
+        circle.addEventListener("mouseleave", () => {
+          text.textContent = skill;
+        });
+      });
+
+      document.querySelectorAll(".progress-fill").forEach(fill => {
+        const percent = fill.dataset.percent;
+
+        const animateFill = () => {
+          fill.style.transition = "none";
+          fill.style.width = "0%";
+          void fill.offsetWidth;
+          fill.style.transition = "width 2s ease-in-out";
+          fill.style.width = percent + "%";
+        };
+
+        setTimeout(animateFill, 300);
+        fill.parentElement.addEventListener("mouseenter", animateFill);
+      });
+    });
+  </script>
+</body>
+
+</html>

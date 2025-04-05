@@ -1,0 +1,319 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef1f5;
+}
+p{
+  color: #333;
+}
+h3 {
+  text-align: center; /* 置中顯示 */
+  font-size: 36px; /* 放大文字 */
+  font-weight: bold;
+  color: #333; /* 文字顏色 */
+  margin-bottom: 20px; /* 增加下方間距 */
+  transition: transform 0.3s ease, color 0.3s ease; /* 加入過渡效果 */
+}
+
+/* 滑鼠懸停效果 */
+h3:hover {
+  transform: scale(1.2); /* 放大文字 */
+  color: #3498db; /* 改變文字顏色 */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto 40px;
+}
+.block {
+  background: white;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-section {
+  display: flex;
+  justify-content: space-between; /* 使左右區塊分開 */
+  align-items: flex-start; /* 垂直對齊 */
+  color: white;
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 60px auto 40px;
+}
+/* 左側：大頭照 + 名字 + 學歷 + 社群連結 */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平置中左側內容 */
+  text-align: center;
+  gap: 15px;           /* 元素間距 */
+  width: 500px;         /* 統一寬度，兩卡片左右對齊 */
+  height: 430px;
+  background-color: #f1f1f1; 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.profile-img {
+  width: 120px; /* 圓形圖片大小 */
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #49C4A2; /* 圓形邊框顏色 */
+}
+.profile-text {
+  flex: 1;
+  text-align: left; /* 文字對齊左邊 */
+}
+
+.profile-text h2, .profile-text p .profile-text h3{
+  color: #333; /* 設置文字為黑色 */
+  transition: transform 0.3s ease, color 0.3s ease; /* 加入過渡效果 */
+}
+
+/* 滑鼠懸停時的動畫效果 */
+.profile-text h2:hover, .profile-text p:hover .profile-text.degree:hover{
+  transform: scale(1.05); /* 放大文字 */
+  color: #3498db; /* 改變文字顏色 */
+}
+
+.profile-text h2 {
+  font-size: 32px; /* 調整字型大小 */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.profile-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.profile-text .degree {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333; 
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+/* 右側：包含 #關於我（quote）與 #標籤（label） */
+.profile-right {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* 使右邊兩個卡片在水平上對齊 */
+  gap: 20px;           /* 兩張卡片之間的距離 */
+}
+/* 右側的卡片統一寬度與樣式，讓它們對齊 */
+.profile-right .quote {
+  width: 300px;         /* 統一寬度，兩卡片左右對齊 */
+  background-color: #f1f1f1; 
+  border-radius: 10px;
+  padding: 20px;
+  color: #333;          /* 文字顏色 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.profile-right .label{
+  width: 300px;         /* 統一寬度，兩卡片左右對齊 */
+  height: 265px;
+  background-color: #f1f1f1; 
+  border-radius: 10px;
+  padding: 20px;
+  color: #333;          /* 文字顏色 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.profile-right .quote h3,
+.profile-right .label h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+/* 右側卡片內文樣式 */
+.profile-right .quote p{
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;  /* 內文可略淡一些，與標題區分 */
+}
+/* 新增：小卡片容器，內含多個小卡片 */
+.small-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
+/* 新增：每個小卡片的樣式 */
+.small-card {
+  background-color: #f1f1f1; 
+  border-radius: 15px;
+  padding: 3px 20px;
+  font-size: 16px;
+  display: flex;             /* 使用 flex 進行置中 */
+  align-items: center;       /* 垂直置中 */
+  justify-content: center;   /* 水平置中 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+/* 加上更高的優先權，覆蓋全局 p 樣式 */
+.small-card p {
+  color: black !important;
+  text-align: center;
+  font-weight: bolder;
+  font-style: italic;
+}
+.small-card:hover {
+  transform: scale(1.1);  /* 滑鼠懸停時放大 */
+}
+
+.skills{
+  justify-content: space-between; /* 使左右區塊分開 */
+  align-items: flex-start; /* 垂直對齊 */
+  color: white;
+  position: relative;
+  padding: 40px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: 60px auto 40px;
+}
+.section {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+.progress-circle:hover {
+  transform: scale(1.1);
+}
+svg {
+  transform: rotate(-90deg);
+}
+circle {
+  fill: none;
+  stroke-width: 15; /* Adjusted to make the progress bar thicker */
+  stroke-linecap: round;
+}
+.background {
+  stroke: #ddd;
+}
+.progress {
+  stroke: url(#gradient);
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+.progress-bar:hover {
+  transform: scale(1.05);
+}
+.progress-bar-container {
+  margin-top: 30px;
+}
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* 增大間距 */
+  font-size: 18px; /* 調整文字大小 */
+  
+
+}
+/* Optimized Progress Bar */
+.progress-bar {
+  height: 30px; /* 增加進度條高度 */
+  width: 100%; /* 填滿容器 */
+  background: #ddd;
+  border-radius: 15px; /* 增加圓角 */
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #00FFFF, #3498db);
+  border-radius: 15px;
+  transition: width 2s ease-in-out;
+}
+.progress-bar-container .progress-label span {
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.experience{
+  justify-content: space-between; /* 使左右區塊分開 */
+  align-items: flex-start; /* 垂直對齊 */
+  color: white;
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 60px auto 40px;
+}
