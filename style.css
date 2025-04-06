@@ -5,13 +5,13 @@ body {
   background-color: #eef1f5;
 }
 p{
-  color: #333;
+  color: #F5F5F5;
 }
 h3 {
   text-align: center; /* 置中顯示 */
   font-size: 36px; /* 放大文字 */
   font-weight: bold;
-  color: #333; /* 文字顏色 */
+  color: #F5F5F5; /* 文字顏色 */
   margin-bottom: 20px; /* 增加下方間距 */
   transition: transform 0.3s ease, color 0.3s ease; /* 加入過渡效果 */
 }
@@ -26,7 +26,7 @@ h3:hover {
   position: fixed;
   top: 0;
   right: 0;
-  background: white;
+  background: #333;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 10;
   display: flex;
@@ -35,7 +35,7 @@ h3:hover {
 }
 .navbar a {
   text-decoration: none;
-  color: #333;
+  color: #F5F5F5;
   font-weight: bold;
 }
 .container {
@@ -44,7 +44,7 @@ h3:hover {
   margin: 80px auto 40px;
 }
 .block {
-  background: white;
+  background: #333;
   padding: 30px;
   margin-top: 30px;
   border-radius: 12px;
@@ -70,7 +70,7 @@ h3:hover {
   gap: 15px;           /* 元素間距 */
   width: 500px;         /* 統一寬度，兩卡片左右對齊 */
   height: 430px;
-  background-color: #f1f1f1; 
+  background-color: #696969; 
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -81,13 +81,22 @@ h3:hover {
   border-radius: 50%;
   border: 4px solid #49C4A2; /* 圓形邊框顏色 */
 }
+.profile-img {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: perspective(1000px) scale(1.2) rotateY(10deg) rotateX(5deg);
+  box-shadow: 0 0 30px 10px rgba(73, 196, 162, 0.8);
+}
+
 .profile-text {
   flex: 1;
   text-align: left; /* 文字對齊左邊 */
 }
 
 .profile-text h2, .profile-text p .profile-text h3{
-  color: #333; /* 設置文字為黑色 */
+  color: #F5F5F5; /* 設置文字為黑色 */
   transition: transform 0.3s ease, color 0.3s ease; /* 加入過渡效果 */
 }
 
@@ -111,12 +120,19 @@ h3:hover {
 }
 
 .profile-text .degree {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
-  color: #333; 
+  color: #F5F5F5; 
   text-align: center;
 }
+.profile-text .DualDegree {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #F5F5F5; 
+  text-align: center;
+}
+
 .social-icons {
   display: flex;
   gap: 15px;
@@ -130,6 +146,91 @@ h3:hover {
 .social-icons a:hover img {
   transform: scale(1.2);
 }
+
+.glitch {
+  position: relative;
+  color: #87CEEB;         /* 淡藍色 */
+  font-weight: bold;      /* 加粗 */
+  text-align: center;     
+  cursor: default;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  overflow: hidden;
+}
+
+.glitch::before {
+  text-shadow: -2px 0 red;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  text-shadow: 2px 0 blue;
+  animation: glitch2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+  0% {
+    clip: rect(10px, 9999px, 30px, 0);
+    transform: translate(-3px, -3px);
+  }
+  20% {
+    clip: rect(85px, 9999px, 95px, 0);
+    transform: translate(3px, 3px);
+  }
+  40% {
+    clip: rect(45px, 9999px, 55px, 0);
+    transform: translate(-3px, 3px);
+  }
+  60% {
+    clip: rect(5px, 9999px, 15px, 0);
+    transform: translate(3px, -3px);
+  }
+  80% {
+    clip: rect(75px, 9999px, 85px, 0);
+    transform: translate(-3px, -3px);
+  }
+  100% {
+    clip: rect(10px, 9999px, 30px, 0);
+    transform: translate(3px, 3px);
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    clip: rect(50px, 9999px, 60px, 0);
+    transform: translate(3px, 3px);
+  }
+  20% {
+    clip: rect(15px, 9999px, 25px, 0);
+    transform: translate(-3px, -3px);
+  }
+  40% {
+    clip: rect(65px, 9999px, 75px, 0);
+    transform: translate(3px, -3px);
+  }
+  60% {
+    clip: rect(25px, 9999px, 35px, 0);
+    transform: translate(-3px, 3px);
+  }
+  80% {
+    clip: rect(55px, 9999px, 65px, 0);
+    transform: translate(3px, 3px);
+  }
+  100% {
+    clip: rect(50px, 9999px, 60px, 0);
+    transform: translate(-3px, -3px);
+  }
+}
+
 /* 右側：包含 #關於我（quote）與 #標籤（label） */
 .profile-right {
   display: flex;
@@ -140,19 +241,19 @@ h3:hover {
 /* 右側的卡片統一寬度與樣式，讓它們對齊 */
 .profile-right .quote {
   width: 300px;         /* 統一寬度，兩卡片左右對齊 */
-  background-color: #f1f1f1; 
+  background-color: #696969; 
   border-radius: 10px;
   padding: 20px;
-  color: #333;          /* 文字顏色 */
+  color: #F5F5F5;          /* 文字顏色 */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .profile-right .label{
   width: 300px;         /* 統一寬度，兩卡片左右對齊 */
   height: 265px;
-  background-color: #f1f1f1; 
+  background-color: #696969; 
   border-radius: 10px;
   padding: 20px;
-  color: #333;          /* 文字顏色 */
+  color: #F5F5F5;          /* 文字顏色 */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .profile-right .quote h3,
@@ -160,14 +261,105 @@ h3:hover {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 20px;
-  color: #333;
+  color: #F5F5F5;
 }
 /* 右側卡片內文樣式 */
 .profile-right .quote p{
   text-align: center;
   font-size: 16px;
   line-height: 1.6;
-  color: #666;  /* 內文可略淡一些，與標題區分 */
+  color: #F5F5F5;  /* 內文可略淡一些，與標題區分 */
+}
+
+.quote p {
+  position: relative;
+  font-size: 24px;
+  color: #87CEEB;         /* 淡藍色 */
+  font-weight: bold;      /* 加粗 */
+  font-style: italic;     /* 斜體 */
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+/* 偽元素，複製文字內容 */
+.quote p::before,
+.quote p::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  overflow: hidden;
+  opacity: 0.8;
+}
+/* 第一層偽元素：紅色干擾 */
+.quote p::before {
+  text-shadow: -6px 0 red;
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+/* 第二層偽元素：藍色干擾 */
+.quote p::after {
+  text-shadow: 6px 0 blue;
+  animation: glitch2 3s infinite linear alternate-reverse;
+}
+
+/* 定義 glitch 動畫 */
+@keyframes glitch {
+  0% {
+    clip: rect(10px, 9999px, 30px, 0);
+    transform: translate(-3px, -3px);
+  }
+  20% {
+    clip: rect(85px, 9999px, 95px, 0);
+    transform: translate(3px, 3px);
+  }
+  40% {
+    clip: rect(45px, 9999px, 55px, 0);
+    transform: translate(-3px, 3px);
+  }
+  60% {
+    clip: rect(5px, 9999px, 15px, 0);
+    transform: translate(3px, -3px);
+  }
+  80% {
+    clip: rect(75px, 9999px, 85px, 0);
+    transform: translate(-3px, -3px);
+  }
+  100% {
+    clip: rect(10px, 9999px, 30px, 0);
+    transform: translate(3px, 3px);
+  }
+}
+
+/* 定義 glitch2 動畫 */
+@keyframes glitch2 {
+  0% {
+    clip: rect(50px, 9999px, 60px, 0);
+    transform: translate(3px, 3px);
+  }
+  20% {
+    clip: rect(15px, 9999px, 25px, 0);
+    transform: translate(-3px, -3px);
+  }
+  40% {
+    clip: rect(65px, 9999px, 75px, 0);
+    transform: translate(3px, -3px);
+  }
+  60% {
+    clip: rect(25px, 9999px, 35px, 0);
+    transform: translate(-3px, 3px);
+  }
+  80% {
+    clip: rect(55px, 9999px, 65px, 0);
+    transform: translate(3px, 3px);
+  }
+  100% {
+    clip: rect(50px, 9999px, 60px, 0);
+    transform: translate(-3px, -3px);
+  }
 }
 /* 新增：小卡片容器，內含多個小卡片 */
 .small-cards {
@@ -179,7 +371,7 @@ h3:hover {
 
 /* 新增：每個小卡片的樣式 */
 .small-card {
-  background-color: #f1f1f1; 
+  background-color: #A9A9A9; 
   border-radius: 15px;
   padding: 3px 20px;
   font-size: 16px;
@@ -191,7 +383,7 @@ h3:hover {
 }
 /* 加上更高的優先權，覆蓋全局 p 樣式 */
 .small-card p {
-  color: black !important;
+  color: #F5F5F5 !important;
   text-align: center;
   font-weight: bolder;
   font-style: italic;
@@ -217,11 +409,14 @@ h3:hover {
   border-radius: 10px;
 }
 .progress-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 每排三欄 */
+  gap: 30px;                              /* 設定間距 */
   margin-top: 20px;
+  justify-items: center;                  /* 水平置中 */
+  align-items: center;                    /* 垂直置中 */
 }
+
 .progress-circle {
   position: relative;
   width: 120px;
@@ -239,7 +434,7 @@ svg {
 }
 circle {
   fill: none;
-  stroke-width: 15; /* Adjusted to make the progress bar thicker */
+  stroke-width: 20; /* Adjusted to make the progress bar thicker */
   stroke-linecap: round;
 }
 .background {
@@ -258,7 +453,7 @@ circle {
   transform: translate(-50%, -50%);
   font-weight: bold;
   font-size: 16px;
-  color: #333;
+  color: #F5F5F5;
   text-align: center;
 }
 .progress-bar:hover {
@@ -294,7 +489,7 @@ circle {
 }
 .progress-bar-container .progress-label span {
   font-weight: bold;
-  color: #333;
+  color: #F5F5F5;
   margin-top: 20px;
 }
 .progress-fill::after {
@@ -316,4 +511,16 @@ circle {
   border-radius: 15px;
   max-width: 900px;
   margin: 60px auto 40px;
+}
+
+/* 星空背景容器設定 */
+#stars-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;            /* 放在最底層 */
+  pointer-events: none;   /* 不影響其他互動 */
+  background: black;      /* 星空背景預設為黑色 */
 }

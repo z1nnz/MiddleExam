@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>個人履歷</title>
+    <title>Resume</title>
     <!-- 引入外部 CSS 檔案 -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -19,22 +19,22 @@
       <div class="profile-left">
           <img src="./image/IMG_6662.jpg" alt="個人照片" class="profile-img">
           <div class="profile-text">
-              <h2>吳紘在</h2>
-              <div class="degree">中原大學-企業管理學系</div>
-              <div class="degree">雙主修-資訊管理學系</div>
+            <h2 class="glitch" data-text="吳紘在">吳紘在</h2>
+            <div class="degree" data-text="中原大學-企業管理學系">中原大學-企業管理學系</div>
+            <div class="DualDegree" data-text="雙主修-資訊管理學系">雙主修-資訊管理學系</div>            
           </div>
   
           <div class="social-icons">
-              <a href="https://facebook.com" target="_blank">
+              <a href="https://www.facebook.com/z1nnz/" target="_blank">
                 <img src="./image/facebook.png" alt="Facebook" style="width:24px; height:24px;">
               </a>
-              <a href="https://www.instagram.com" target="_blank">
-                <img src="./image/instagram.jpg" alt="Instagram" style="width:24px; height:24px;">
+              <a href="https://www.instagram.com/z1nnz_/" target="_blank">
+                <img src="./image/instagram.png" alt="Instagram" style="width:24px; height:24px;">
               </a>
-              <a href="https://x.com" target="_blank">
+              <a href="https://x.com/realdonaldtrump?lang=zh-Hant" target="_blank">
                 <img src="./image/x.png" alt="X" style="width:24px; height:24px;">
               </a>
-              <a href="https://github.com" target="_blank">
+              <a href="https://github.com/z1nnz" target="_blank">
                 <img src="./image/github.png" alt="GitHub" style="width:24px; height:24px;">
               </a>
           </div>
@@ -42,35 +42,35 @@
   
       <!-- 右側區塊：Quote 和 標籤 -->
       <div class="profile-right">
-          <!-- # Quote -->
-          <div class="quote">
-              <div class="profile-text">
-                <h3># 關於我</h3>
-              </div>
-              <p >“為了守護自由而捨棄自由”</p>
-          </div>
+        <!-- # Quote -->
+        <div class="quote">
+        <div class="profile-text">
+          <h3># 關於我</h3>
+        </div>
+          <p data-text="為了守護自由而捨棄自由">為了守護自由而捨棄自由</p>
+        </div>
   
-          <!-- # label -->
-          <div class="label">
-            <h3># 標籤</h3>
+        <!-- # label -->
+        <div class="label">
+          <h3># 標籤</h3>
             <!-- 小卡片容器 -->
             <div class="small-cards">
-              <div class="small-card"><p>＃ 希望轉系成功</p></div>
-              <div class="small-card"><p>＃生日0111</p></div>
-              <div class="small-card"><p>＃喜歡火影忍者</p></div>
-              <div class="small-card"><p>＃以後想做遊戲開發</p></div>
-              <div class="small-card"><p>＃好想睡覺</p></div>
-              <div class="small-card"><p>＃努力考研</p></div>
+            <div class="small-card"><p>＃希望轉系成功</p></div>
+            <div class="small-card"><p>＃生日0111</p></div>
+            <div class="small-card"><p>＃喜歡火影忍者</p></div>
+            <div class="small-card"><p>＃以後想做遊戲開發</p></div>
+            <div class="small-card"><p>＃好想睡覺</p></div>
+            <div class="small-card"><p>＃努力考研</p></div>
             </div>
-          </div>
+        </div>
       </div>
-  </div>
+    </div>
   
 
-      <div id="skills" class="block skills">
-        <h3>程式能力</h3>
+    <div id="skills" class="block skills">
+      <h3>程式能力</h3>
         <div class="progress-container">
-          <div class="progress-circle" data-skill="HTML" data-percent="90">
+          <div class="progress-circle" data-skill="Python" data-percent="90">
             <svg width="120" height="120">
               <defs>
                 <linearGradient
@@ -106,11 +106,11 @@
               <circle class="background" cx="60" cy="60" r="50" />
               <circle class="progress" cx="60" cy="60" r="50" />
             </svg>
-            <div class="progress-text">HTML</div>
+            <div class="progress-text">CSS</div>
           </div>
           <div
             class="progress-circle"
-            data-skill="JavaScript"
+            data-skill="Java"
             data-percent="85"
           >
             <svg width="120" height="120">
@@ -131,22 +131,62 @@
             </svg>
             <div class="progress-text">Java</div>
           </div>
+           <!-- 新增的三個進度圈（下一排） -->
+          <div class="progress-circle" data-skill="C++" data-percent="70">
+            <svg width="120" height="120">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #00FFFF" />
+                  <stop offset="100%" style="stop-color: #3498db" />
+                </linearGradient>
+              </defs>
+              <circle class="background" cx="60" cy="60" r="50" />
+              <circle class="progress" cx="60" cy="60" r="50" />
+            </svg>
+            <div class="progress-text">C++</div>
+          </div>
+          <div class="progress-circle" data-skill="HTML" data-percent="75">
+            <svg width="120" height="120">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #00FFFF" />
+                  <stop offset="100%" style="stop-color: #3498db" />
+                </linearGradient>
+              </defs>
+              <circle class="background" cx="60" cy="60" r="50" />
+              <circle class="progress" cx="60" cy="60" r="50" />
+            </svg>
+            <div class="progress-text">HTML</div>
+          </div>
+          <div class="progress-circle" data-skill="JavaScript" data-percent="80">
+            <svg width="120" height="120">
+              <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color: #00FFFF" />
+                  <stop offset="100%" style="stop-color: #3498db" />
+                </linearGradient>
+              </defs>
+              <circle class="background" cx="60" cy="60" r="50" />
+              <circle class="progress" cx="60" cy="60" r="50" />
+            </svg>
+            <div class="progress-text">JavaScript</div>
+          </div>
         </div>
+    </div>
+
+    <div class="block skills">
+      <h3>專業能力</h3>
+      <div class="progress-bar-container">
+        <div class="progress-label">
+          <span>Macroeconomics</span><span class="bar-percent">99%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" data-percent="99"></div>
       </div>
 
-      <div class="block skills">
-        <h3>專業能力</h3>
-        <div class="progress-bar-container">
-          <div class="progress-label">
-            <span>Macroeconomics</span><span class="bar-percent">99%</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="99"></div>
-          </div>
-
-          <div class="progress-label">
-            <span>Microeconomics</span><span class="bar-percent">99%</span>
-          </div>
+        <div class="progress-label">
+          <span>Microeconomics</span><span class="bar-percent">99%</span>
+        </div>
           <div class="progress-bar">
             <div class="progress-fill" data-percent="99"></div>
           </div>
@@ -179,6 +219,109 @@
         <p>這裡填入你的經歷。</p>
       </div>
     </div>
+
+        <!-- 新增：星空背景容器 -->
+    <div id="stars-background">
+      <canvas id="stars-canvas"></canvas>
+    </div>
+
+    <script>
+    (function() {
+      var canvas = document.getElementById('stars-canvas'),
+          ctx = canvas.getContext('2d'),
+          w = canvas.width = window.innerWidth,
+          h = canvas.height = window.innerHeight,
+          hue = 217,
+          stars = [],
+          count = 0,
+          maxStars = 3000; // 星星數量
+      
+      // 建立一個隱藏的 canvas 用來快取星星樣式
+      var canvas2 = document.createElement('canvas'),
+          ctx2 = canvas2.getContext('2d');
+      canvas2.width = 100;
+      canvas2.height = 100;
+      var half = canvas2.width / 2,
+          gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+      gradient2.addColorStop(0.025, '#CCC');
+      gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+      gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+      gradient2.addColorStop(1, 'transparent');
+      ctx2.fillStyle = gradient2;
+      ctx2.beginPath();
+      ctx2.arc(half, half, half, 0, Math.PI * 2);
+      ctx2.fill();
+      
+      function random(min, max) {
+        if (arguments.length < 2) {
+          max = min;
+          min = 0;
+        }
+        if (min > max) {
+          var hold = max;
+          max = min;
+          min = hold;
+        }
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      
+      function maxOrbit(x, y) {
+        var max = Math.max(x, y),
+            diameter = Math.round(Math.sqrt(max * max + max * max));
+        return diameter / 2;
+      }
+      
+      var Star = function() {
+        this.orbitRadius = random(maxOrbit(w, h));
+        this.radius = random(60, this.orbitRadius) / 8;
+        this.orbitX = w / 2;
+        this.orbitY = h / 2;
+        this.timePassed = random(0, maxStars);
+        this.speed = random(this.orbitRadius) / 50000;
+        this.alpha = random(2, 10) / 10;
+        count++;
+        stars[count] = this;
+      }
+      
+      Star.prototype.draw = function() {
+        var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+            y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+            twinkle = random(10);
+        if (twinkle === 1 && this.alpha > 0) {
+          this.alpha -= 0.05;
+        } else if (twinkle === 2 && this.alpha < 1) {
+          this.alpha += 0.05;
+        }
+        ctx.globalAlpha = this.alpha;
+        ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+        this.timePassed += this.speed;
+      }
+      
+      for (var i = 0; i < maxStars; i++) {
+        new Star();
+      }
+      
+      function animation() {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.globalAlpha = 0.5;
+        ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+        ctx.fillRect(0, 0, w, h);
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+          stars[i].draw();
+        }
+        window.requestAnimationFrame(animation);
+      }
+      
+      animation();
+      
+      window.addEventListener('resize', function() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+    })();
+    </script>
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -233,5 +376,6 @@
         });
       });
     </script>
+
   </body>
 </html>
