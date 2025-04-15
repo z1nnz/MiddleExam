@@ -4,9 +4,11 @@ body {
   padding: 0;
   background-color: #eef1f5;
 }
-p{
+
+p {
   color: #F5F5F5;
 }
+
 h3 {
   text-align: center; /* 置中顯示 */
   font-size: 36px; /* 放大文字 */
@@ -50,6 +52,8 @@ h3:hover {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+                             /* 個人簡介區塊 */         /* 個人簡介區塊 */
+
 .profile-section {
   display: flex;
   justify-content: space-between; /* 使左右區塊分開 */
@@ -231,7 +235,7 @@ h3:hover {
   }
 }
 
-/* 右側：包含 #關於我（quote）與 #標籤（label） */
+/* 右側：#關於我（quote）與 #標籤（label） */
 .profile-right {
   display: flex;
   flex-direction: column; 
@@ -361,7 +365,7 @@ h3:hover {
     transform: translate(-3px, -3px);
   }
 }
-/* 新增：小卡片容器，內含多個小卡片 */
+/* 小卡片容器，內含多個小卡片 */
 .small-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -369,7 +373,7 @@ h3:hover {
   justify-items: center;
 }
 
-/* 新增：每個小卡片的樣式 */
+/* 每個小卡片的樣式 */
 .small-card {
   background-color: #A9A9A9; 
   border-radius: 15px;
@@ -391,6 +395,7 @@ h3:hover {
 .small-card:hover {
   transform: scale(1.1);  /* 滑鼠懸停時放大 */
 }
+                            /* 技能區塊 */         /* 技能區塊 */
 
 .skills{
   justify-content: space-between; /* 使左右區塊分開 */
@@ -467,8 +472,6 @@ circle {
   justify-content: space-between;
   margin-bottom: 15px; /* 增大間距 */
   font-size: 18px; /* 調整文字大小 */
-  
-
 }
 /* Optimized Progress Bar */
 .progress-bar {
@@ -502,6 +505,9 @@ circle {
   font-weight: bold;
   color: #fff;
 }
+
+                            /* 經歷區塊 */         /* 經歷區塊 */
+
 .experience{
   justify-content: space-between; /* 使左右區塊分開 */
   align-items: flex-start; /* 垂直對齊 */
@@ -512,6 +518,118 @@ circle {
   max-width: 900px;
   margin: 60px auto 40px;
 }
+
+.experience-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.exp-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #444;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.exp-btn:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+.exp-btn.selected {
+  background-color: #00CED1;
+  color: #222;
+}
+.exp-content {
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #2f2f2f;
+  color: white;
+}
+
+.education-item-hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 40px;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+  gap: 10px;
+}
+
+.education-item-hover:hover {
+  transform: scale(1.03);
+}
+
+.education-text {
+  width: 50%;
+  color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.education-text h4 {
+  font-size: 20px;
+  color: #00FFFF;
+  margin-bottom: 10px;
+}
+
+.education-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.education-text a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00CED1;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.education-text a:hover {
+  color: #3498db;
+}
+
+/* 圖片容器：等高排版 */
+.education-image-wrapper {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* 預設圖片透明 */
+.education-hover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* 滑到整張卡片才出現圖片 */
+.education-item-hover:hover .education-hover-image {
+  opacity: 1;
+}
+
+
+
+
 
 /* 星空背景容器設定 */
 #stars-background {

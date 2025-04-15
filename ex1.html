@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./image/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./image/favicon/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="./image/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./image/favicon/site.webmanifest">
     <title>Resume</title>
     <!-- 引入外部 CSS 檔案 -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="navbar">
-      <a href="#profile">個人介紹</a>
-      <a href="#skills">專業技能</a>
-      <a href="#experience">工作經歷</a>
+      <a href="#profile">About me</a>
+      <a href="#skills">skills</a>
+      <a href="#experience">Experiences</a>
     </div>
 
     <div id="profile" class="block profile-section">
@@ -36,6 +40,10 @@
               </a>
               <a href="https://github.com/z1nnz" target="_blank">
                 <img src="./image/github.png" alt="GitHub" style="width:24px; height:24px;">
+              </a>
+              <!-- Email 發信連結 -->
+              <a href="mailto:brucewu0111@gmail.com">
+                <img src="./image/gmail.png" alt="Email" style="width:24px; height:24px;">
               </a>
           </div>
       </div>
@@ -68,8 +76,9 @@
   
 
     <div id="skills" class="block skills">
-      <h3>程式能力</h3>
+      <h3>程式能力 ｜ Programming ability</h3>
         <div class="progress-container">
+          <!-- 三個進度圈（上排） -->
           <div class="progress-circle" data-skill="Python" data-percent="90">
             <svg width="120" height="120">
               <defs>
@@ -131,7 +140,7 @@
             </svg>
             <div class="progress-text">Java</div>
           </div>
-           <!-- 新增的三個進度圈（下一排） -->
+           <!-- 三個進度圈（下排） -->
           <div class="progress-circle" data-skill="C++" data-percent="70">
             <svg width="120" height="120">
               <defs>
@@ -175,7 +184,7 @@
     </div>
 
     <div class="block skills">
-      <h3>專業能力</h3>
+      <h3>學科能力 ｜ Subject ability</h3>
       <div class="progress-bar-container">
         <div class="progress-label">
           <span>Macroeconomics</span><span class="bar-percent">99%</span>
@@ -214,13 +223,24 @@
         </div>
       </div>
 
-      <div id="experience" class="block experience">
-        <h3>工作經歷</h3>
-        <p>這裡填入你的經歷。</p>
-      </div>
-    </div>
+    <div id="experience" class="block experience">
+      <h3>個人經歷 ｜ Experiences</h3>
+      
 
-        <!-- 新增：星空背景容器 -->
+      
+              
+
+<footer>
+  <div style="margin: 32px; text-align: center;">
+      <hr style="border-color:#ffffff" noshade>
+      <div style="margin-top: 32px; color: white;">
+          Copyright @2025 Wu hong-zai
+          <br>
+      </div>
+  </div>
+</footer>
+
+    <!-- 星空背景容器 -->
     <div id="stars-background">
       <canvas id="stars-canvas"></canvas>
     </div>
@@ -236,7 +256,7 @@
           count = 0,
           maxStars = 3000; // 星星數量
       
-      // 建立一個隱藏的 canvas 用來快取星星樣式
+      // 建立隱藏的 canvas 用來快取星星樣式
       var canvas2 = document.createElement('canvas'),
           ctx2 = canvas2.getContext('2d');
       canvas2.width = 100;
